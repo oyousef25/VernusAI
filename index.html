@@ -4,72 +4,85 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VernusAI</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <div class="navbar">
-    <h1>VernusAI</h1>
-    <div class="hamburger-menu" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
+  <header class="navbar">
+    <h1 class="logo">VernusAI</h1>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-    <nav class="nav-links hidden">
-      <a href="#hero">Home</a>
-      <a href="#features">Features</a>
-      <a href="#roadmap">Roadmap</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </header>
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <video autoplay muted loop class="background-video">
+  <section class="home">
+    <video class="background-video" autoplay muted loop playsinline>
       <source src="video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
+      Your browser does not support HTML5 video.
     </video>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>Welcome to VernusAI</h1>
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>VernusAI</h1>
       <p>The gateway to smarter, faster, and more efficient blockchain development in the era of Web3!</p>
-      <a href="https://twinai.gitbook.io/twinai" target="_blank">
-        <button>Learn More</button>
-      </a>
+      <a href="https://twinai.gitbook.io/twinai" target="_blank" class="btn">Learn More</a>
     </div>
   </section>
 
-  <!-- Features Section -->
-  <section id="features">
-    <h2>Features</h2>
+  <section id="about" class="section">
+    <h2>About VernusAI</h2>
     <div class="cards">
-      <div class="card">Real-Time Analytics</div>
-      <div class="card">Wallet Tracking</div>
-      <div class="card">Secure Transactions</div>
-      <div class="card">Customizable Dashboards</div>
+      <div class="card">
+        <h3>What is VernusAI?</h3>
+        <p>An AI-driven platform revolutionizing blockchain development for businesses and developers worldwide.</p>
+      </div>
+      <div class="card">
+        <h3>Why Choose Us?</h3>
+        <p>Seamless integration, powerful AI tools, and unmatched support for all your Web3 needs.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Roadmap Section -->
-  <section id="roadmap">
-    <h2>Roadmap</h2>
+  <section id="features" class="section">
+    <h2>Key Features</h2>
     <div class="cards">
-      <div class="card">Q1: Platform Launch</div>
-      <div class="card">Q2: Mobile App Release</div>
-      <div class="card">Q3: Multi-Currency Support</div>
-      <div class="card">Q4: Community Integration</div>
+      <div class="card">
+        <h3>Smart Contract Builder</h3>
+        <p>Generate robust, secure smart contracts tailored to your needs.</p>
+      </div>
+      <div class="card">
+        <h3>Real-Time Analytics</h3>
+        <p>Track blockchain data and performance with ease.</p>
+      </div>
+      <div class="card">
+        <h3>Scalable Solutions</h3>
+        <p>Build scalable applications ready to meet your future demands.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
+  <section id="contact" class="section">
     <h2>Contact Us</h2>
-    <div class="cards">
-      <div class="card">Email: support@crypto.com</div>
-      <div class="card">Phone: +123 456 7890</div>
-      <div class="card">Twitter: @CryptoUtility</div>
-      <div class="card">LinkedIn: Crypto Utility</div>
-    </div>
+    <form>
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" placeholder="Write your message" required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <script src="script.js"></script>
