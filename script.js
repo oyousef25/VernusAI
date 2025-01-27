@@ -1,36 +1,25 @@
+// Toggle the hamburger menu
 function toggleMenu() {
     const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('show');
+    navLinks.classList.toggle('active');
   }
   
-  // Scroll animations for sections
-  const sections = document.querySelectorAll('section');
+  // Reveal sections and cards on scroll
+  const sections = document.querySelectorAll('.section');
   const cards = document.querySelectorAll('.card');
   
-  const options = {
-    root: null,
-    threshold: 0.1,
-  };
-  
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = 'translateY(0)';
-        observer.unobserve(entry.target);
-  
-        // Animate cards inside the section
-        const childCards = entry.target.querySelectorAll('.card');
-        childCards.forEach((card, index) => {
-          setTimeout(() => {
-            card.style.opacity = 1;
-            card.style.transform = 'translateY(0)';
-          }, index * 200); // Delay each card animation
-        });
+  window.addEventListener('scroll', () => {
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        section.classList.add('visible');
       }
     });
-  }, options);
   
-  sections.forEach(section => {
-    observer.observe(section);
+    cards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        card.classList.add('visible');
+      }
+    });
   });  
