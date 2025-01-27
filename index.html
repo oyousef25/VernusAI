@@ -1,90 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VernusAI</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VernusAI</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+        rel="stylesheet">
 </head>
+
 <body>
-  <header class="navbar">
-    <h1 class="logo">VernusAI</h1>
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#features">Features</a></li>
-      <li><a href="#contact">Contact Us</a></li>
-    </ul>
-  </header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">VernusAI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#our-agents">AI Agents</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <section class="home">
-    <video class="background-video" autoplay muted loop playsinline>
-      <source src="video.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
-    <div class="overlay"></div>
-    <div class="content">
-      <h1>VernusAI</h1>
-      <p>The gateway to smarter, faster, and more efficient blockchain development in the era of Web3!</p>
-      <a href="https://twinai.gitbook.io/twinai" target="_blank" class="btn">Learn More</a>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="overlay"></div>
+        <video class="background-video" autoplay muted loop>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div
+            class="container text-center text-white d-flex flex-column justify-content-center align-items-center vh-100">
+            <h1 class="display-3 fw-bold">VernusAI</h1>
+            <p class="lead">The gateway to smarter, faster, and more efficient blockchain development in the era of
+                Web3!</p>
+            <a href="https://twinai.gitbook.io/twinai" target="_blank" class="btn btn-primary btn-lg">Learn More</a>
+        </div>
+    </header>
 
-  <section id="about" class="section">
-    <h2>About VernusAI</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>What is VernusAI?</h3>
-        <p>An AI-driven platform revolutionizing blockchain development for businesses and developers worldwide.</p>
-      </div>
-      <div class="card">
-        <h3>Why Choose Us?</h3>
-        <p>Seamless integration, powerful AI tools, and unmatched support for all your Web3 needs.</p>
-      </div>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4">About VernusAI</h2>
+            <p class="lead">VernusAI empowers developers to seamlessly integrate AI into blockchain solutions. By
+                leveraging the power of cutting-edge machine learning, we help you unlock the full potential of Web3.
+            </p>
+        </div>
+    </section>
+    <section id="our-agents" class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">Our AI Agents</h2>
+            <div class="row g-4">
+                <!-- Codex Card -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-lg bg-dark text-light">
+                        <div class="card-img-top-wrapper text-center py-4">
+                            <img src="codex.gif" class="animated-icon" alt="Codex">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Codex</h5>
+                            <p class="card-text">Your Smart Website Architect</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sketchy Card -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-lg bg-dark text-light">
+                        <div class="card-img-top-wrapper text-center py-4">
+                            <img src="sketchy.gif" class="animated-icon" alt="Sketchy">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Sketchy</h5>
+                            <p class="card-text">Your AI Logo Designer</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Doc Card -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-lg bg-dark text-light">
+                        <div class="card-img-top-wrapper text-center py-4">
+                            <img src="doc.gif" class="animated-icon" alt="Doc">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Doc</h5>
+                            <p class="card-text">Your AI White Paper Architect</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Oracle Card -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-lg bg-dark text-light">
+                        <div class="card-img-top-wrapper text-center py-4">
+                            <img src="oracle.gif" class="animated-icon" alt="Oracle">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Oracle</h5>
+                            <p class="card-text">Your Strategic Partner for Accurate Market Predictions</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blockster Card -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-lg bg-dark text-light">
+                        <div class="card-img-top-wrapper text-center py-4">
+                            <img src="blockster.gif" class="animated-icon" alt="Blockster">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Blockster</h5>
+                            <p class="card-text">Building Blockchain Contracts, No Code Needed</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Chatty Card -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-lg bg-dark text-light">
+                        <div class="card-img-top-wrapper text-center py-4">
+                            <img src="chatty.gif" class="animated-icon" alt="Chatty">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Chatty</h5>
+                            <p class="card-text">Your 24/7 Virtual Assistant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Trackster Card (Centered and Spaced) -->
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-lg bg-dark text-light">
+                        <div class="card-img-top-wrapper text-center py-4">
+                            <img src="trackster.gif" class="animated-icon" alt="Trackster">
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Trackster</h5>
+                            <p class="card-text">Secure, Real-Time Wallet Tracking</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="features" class="section">
-    <h2>Key Features</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Smart Contract Builder</h3>
-        <p>Generate robust, secure smart contracts tailored to your needs.</p>
-      </div>
-      <div class="card">
-        <h3>Real-Time Analytics</h3>
-        <p>Track blockchain data and performance with ease.</p>
-      </div>
-      <div class="card">
-        <h3>Scalable Solutions</h3>
-        <p>Build scalable applications ready to meet your future demands.</p>
-      </div>
-    </div>
-  </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                        </div>
+                        <div class="text-center"> <!-- Centering div -->
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <form>
-      <div class="form-group">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" placeholder="Enter your name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Your Email</label>
-        <input type="email" id="email" placeholder="Enter your email" required>
-      </div>
-      <div class="form-group">
-        <label for="message">Your Message</label>
-        <textarea id="message" placeholder="Write your message" required></textarea>
-      </div>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Brand and Tagline -->
+                <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                    <h5 class="text-uppercase fw-bold">VernusAI</h5>
+                    <p class="mb-0">The gateway to smarter, faster, and more efficient blockchain development in the era
+                        of Web3!</p>
+                </div>
+                <!-- Navigation Links -->
+                <div class="col-md-4 text-center mb-3 mb-md-0">
+                    <h6 class="text-uppercase">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#about" class="text-light text-decoration-none">About</a></li>
+                        <li><a href="#features" class="text-light text-decoration-none">Features</a></li>
+                        <li><a href="#contact" class="text-light text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Social Media Links -->
+                <div class="col-md-4 text-center text-md-end">
+                    <h6 class="text-uppercase">Follow Us</h6>
+                    <a href="https://twitter.com" class="text-light me-3"><i class="bi bi-twitter"></i></a>
+                    <a href="https://facebook.com" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="https://linkedin.com" class="text-light me-3"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://github.com" class="text-light"><i class="bi bi-github"></i></a>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col text-center">
+                    <small>&copy; 2025 VernusAI. All rights reserved.</small>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-  <script src="script.js"></script>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
