@@ -1,3 +1,12 @@
+:root {
+  --bg-color: #6f42c1; /* Your desired background color */
+  --text-color: #ffffff; /* Your desired text color */
+  --container-bg-color: #5a2d9b; /* Darker background for the chat container */
+  --chat-bg-color: #6f42c1; /* Background for chat box */
+  --button-bg-color: #9b59b6; /* Background color for buttons */
+  --button-hover-bg-color: #8e44ad; /* Background color on button hover */
+}
+
 /* Hero Section */
 .hero-section {
   position: relative;
@@ -99,6 +108,11 @@
   color: #fff;
 }
 
+.card a:hover {
+  text-decoration: none; /* Remove underline on hover */
+  opacity: 0.8; /* Change opacity on hover */
+}
+
 #contact, #about {
   background-color: #2c2c54; /* Dark background for contact section */
   color: white; /* Text color */
@@ -115,7 +129,6 @@
 .btn-primary {
   background-color: #4e3b6b; /* Custom button color */
 }
-
 
 footer a {
   color: #bdb3e6;
